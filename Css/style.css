@@ -32,14 +32,49 @@ h2 {
 .form {
   padding: 30px 40px;
 }
-
+.form-control {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  position: relative;
+}
 .form-control label {
   display: block;
   margin-bottom: 5px;
+  color: #444444;
 }
 
 .form-control input {
   display: block;
   width: 100%;
   padding: 10px;
+  outline: none;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  visibility: hidden;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  background: #006eff;
+  border: 2px solid #006eff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: none;
+  color: #2b2b2b;
 }
