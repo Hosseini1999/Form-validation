@@ -9,11 +9,16 @@ const password2 = document.getElementById("password2");
 function checkRequired(inputArr) {
   inputArr.forEach((input) => {
     if (input.value === "") {
-      // Show Error
+      //* Show Error
       showError(input, `${getFeildsName(input)} is required`);
     } else {
-      // Show success inputs
+      //* Show success inputs
       showSuccess(input);
+      //* Check Email
+      checkEmail(email);
+      // * Check Length
+      checkLength(userName, 3, 15);
+      checkLength(password, 6, 15);
     }
   });
 }
@@ -31,6 +36,31 @@ function showError(input, msg) {
 function showSuccess(input) {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
+}
+// Check valid Email
+function checkEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(email.value)) {
+    //   show input email if is true
+    showSuccess(email);
+  } else {
+    //   not Valid
+    showError(email, "Email is not Valid");
+  }
+}
+// Length of Name and Password
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFeildsName(input)} must be at least ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFeildsName(input)} must be less than ${max} characters`
+    );
+  }
 }
 // * Event Listener
 form.addEventListener("submit", (e) => {
