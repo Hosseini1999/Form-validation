@@ -42,6 +42,7 @@ h2 {
   display: block;
   margin-bottom: 5px;
   color: #444444;
+  font-size: 15px;
 }
 
 .form-control input {
@@ -87,7 +88,7 @@ h2 {
 .form-control.success input {
   border-color: var(--color-success);
 }
-.form-control.success small {
+.form-control.error small {
   color: var(--color-error);
   visibility: visible;
 }
