@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/style.css">
-    <title>Form V</title>
+    <title>Form Validation</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Register With Us</h2>
+        <form class="form" id="form">
+            <div class="from-control">
+                <label for="name">Name</label>
+                <input type="text"  id="name" class="name">
+                <small>Erro</small>
+            </div>
+            <div class="from-control">
+                <label for="email">Email</label>
+                <input type="text"  id="email" class="email">
+                <small>Erro</small>
+            </div>
+            <div class="from-control">
+                <label for="password">Password</label>
+                <input type="text"  id="password" class="password">
+                <small>Erro</small>
+            </div>
+            <div class="from-control">
+                <label for="password2">Confirm Password</label>
+                <input type="text"  id="password2" class="password">
+                <small>Erro</small>
+            </div>
+        </form>
+    </div>
 
     <script src="Js/app.js"></script>
 </body>
