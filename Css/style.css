@@ -29,6 +29,7 @@ h2 {
   text-align: center;
 }
 
+/* Form Part */
 .form {
   padding: 30px 40px;
 }
@@ -59,6 +60,7 @@ h2 {
   left: 0;
   visibility: hidden;
 }
+/* button styling */
 
 .btn {
   width: 100%;
@@ -88,4 +90,20 @@ h2 {
 .form-control.success small {
   color: var(--color-error);
   visibility: visible;
+}
+
+/* Make responsive */
+
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+  }
+
+  .form {
+    padding: 30px 20px;
+  }
+
+  .form-control input {
+    font-size: 14px;
+  }
 }
