@@ -19,6 +19,8 @@ function checkRequired(inputArr) {
       // * Check Length
       checkLength(userName, 3, 15);
       checkLength(password, 6, 15);
+      // * Password match
+      checkPassword(password, password2);
     }
   });
 }
@@ -60,6 +62,15 @@ function checkLength(input, min, max) {
       input,
       `${getFeildsName(input)} must be less than ${max} characters`
     );
+  }
+}
+// Passwords Checks
+function checkPassword(p1, p2) {
+  if (p1.value !== p2.value) {
+    // password error
+    showError(p2, "Password did not match");
+  } else {
+    showSuccess(p2);
   }
 }
 // * Event Listener
