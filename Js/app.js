@@ -10,12 +10,16 @@ function checkRequired(inputArr) {
   inputArr.forEach((input) => {
     if (input.value === "") {
       // Show Error
-      showError(input, `is required`);
+      showError(input, `${getFeildsName(input)} is required`);
     } else {
       // Show success inputs
       showSuccess(input);
     }
   });
+}
+// Get name form input
+function getFeildsName(input) {
+  return input.className.charAt(0).toUpperCase() + input.className.slice(1);
 }
 // Show Error Message
 function showError(input, msg) {
